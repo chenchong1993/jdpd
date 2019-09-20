@@ -14,7 +14,7 @@
   <component name="ProjectId" id="1QJ9QzdQL89dzBvLcvyjXcjs2n3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../json" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -96,7 +96,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -9,7 +9,7 @@ import numpy as np
 def readFile(filename):
     f = open(filename,'r',encoding='utf-8') #如果文件不是uft-8编码方式，读取文件可能报错
     dataLines = f.readlines() #返回list，文件的每一行作为list的一个字符串元素
-    dataLines = dataLines[200:-100]  #读取行数的起始位置
+    dataLines = dataLines[200:-250]  #读取行数的起始位置
     return dataLines
 
 
@@ -110,7 +110,7 @@ def getM(data = []):
     dataM = sqrt(dataM2)
     return dataM
 
-filename = 'C:\\Users\\chenc\\Desktop\\不规则格网\\不同高程测试\\最终数据\\不规则1000NEU.txt'
+filename = 'C:\\Users\\chenc\\Desktop\\不规则格网\\不同高程测试\\最终数据\\方案2\\222NEU.txt'
 data = readFile(filename)
 
 ENU = getData(data)
@@ -123,10 +123,13 @@ print(E)
 print(N)
 print(U)
 
-Me = "Me=" + str(getM(E))
-Mn = "Mn=" + str(getM(N))
-Mu = "Mu=" + str(getM(U))
+Me = getM(E)
+Mn = getM(N)
+Mu = getM(U)
+print(Me,Mn,Mu,sqrt(Me*Me+Mn*Mn),sqrt(Me*Me+Mn*Mn+Mu*Mu))
+'''
 Me = Me[0:8]
 Mn = Mn[0:8]
 Mu = Mu[0:8]
+'''
 draw(E,N,U,Me,Mn,Mu)
