@@ -55,7 +55,7 @@ def plot_2D(dataE = [],dataN = [],dataU = []):
     std_e = np.std(e1)
     std_n = np.std(n1)
 
-    var_e = 3.5  # 标准差
+    var_e = 5  # 标准差
     var_n = np.var(n1) ** 0.5  # 标准差
 
     scale_y = max(var_e,var_n) # 刻度 四倍中误差
@@ -104,7 +104,7 @@ def plot_2D(dataE = [],dataN = [],dataU = []):
 
     std_u = np.std(u1)
 
-    var_u = 5 # 标准差
+    var_u = 20 # 标准差
     var_n = np.var(u1) ** 0.5  # 标准差
 
     scale_y = max(var_u, var_n)  # 刻度 四倍中误差
@@ -152,7 +152,8 @@ def getM(data = []):
     dataM = sqrt(dataM2)
     return dataM
 
-filename = 'E:\\湖南测试\\11.11\\第三次测试\\MI8差分 (1).txt'
+# filename = 'E:\\湖南测试\\论文数据\\虚拟值\\201911131806TestVRSpos.txt'
+filename = 'E:\\湖南测试\\论文数据\\改正数\\201911131806TestGRIDpos.txt'
 data = readFile(filename)
 
 ENU = getData(data)
