@@ -43,21 +43,21 @@ def getData(data = []):
         U.append(float(i.split()[2]))
     return [E,N,U]
 
-def plot_enu(data1 = [],dataName1='',data2 = [],dataName2='',data3 = [],dataName3=''):
+def plot_enu(data1 = [],dataName1='',data2 = [],dataName2='',data3 = [],dataName3='',data12_scale_y=0,data3_scale_y=0):
 # 第一个数据配置:
-    data1_scale_y = 3 # y轴范围
+    data1_scale_y = data12_scale_y # y轴范围
     data1_epoch = len(data1) #x轴范围
     data1_yname = "errors/m"
     data1_xname = "epoch/s"
     data1_label = dataName1
 # 第二个数据配置:
-    data2_scale_y = 3 # y轴范围
+    data2_scale_y = data12_scale_y # y轴范围
     data2_epoch = len(data2) #x轴范围
     data2_yname = "errors/m"
     data2_xname = "epoch/s"
     data2_label = dataName2
 # 第三个数据配置:
-    data3_scale_y = 5 # y轴范围
+    data3_scale_y = data3_scale_y # y轴范围
     data3_epoch = len(data3) #x轴范围
     data3_yname = "errors/m"
     data3_xname = "epoch/s"
@@ -127,7 +127,7 @@ def getM(data = []):
 
 filename106 = 'G:\\北斗地基增强导航定位平台软件\\不规则格网测试\\106NEU.txt'
 filename500 = 'G:\\北斗地基增强导航定位平台软件\\不规则格网测试\\500NEU.txt'
-filename1000 = 'G:\\北斗地基增强导航定位平台软件\\不规则格网测试\\1000NEU.txt'
+filename1000 = 'G:\\C-workspace\\材料\\材料\\GNSS_Primary_VS\\GNSS_Primary_vs\\GNSS_Primary\\mobileDiffenu.txt'
 # filename = 'E:\\湖南测试\\论文数据\\改正数\\201911131806TestGRIDpos.txt'
 data106 = readFile(filename106)
 data500 = readFile(filename500)
@@ -156,7 +156,7 @@ Mn = Mn[0:8]
 Mu = Mu[0:8]
 '''
 # draw(E,N,U,Me,Mn,Mu)
-plot_enu(E,'E',N,'N',U,'U')
+plot_enu(E,'E',N,'N',U,'U',30,50)
 
 
 
